@@ -35,7 +35,7 @@ execute_axis_center
 ![hide_unhide](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/bdc2e437-390d-44f1-a4b3-ac6ebe30f646)
 hide_unhide
 
-- Toggles the Viewport/Renderer Visibility: On and Off.
+- When Object is Selected: Toggles the Viewport/Renderer Visibility: On and Off.
 
 ---
 
