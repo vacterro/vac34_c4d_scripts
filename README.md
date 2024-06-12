@@ -57,7 +57,7 @@ name_adopt
 ![name_inherit](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/89ef3150-9100-4506-8fc9-8cabb634a18f)
 name_inherit
 
-- When Object is Selected: Inherits the name from the Parent
+- When Object is Selected: Inherits the name from the Children
 ![inherit](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/a4167067-6a2a-402b-bc17-8d8d9bba0a95)
 
 ---
