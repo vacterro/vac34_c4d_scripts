@@ -56,6 +56,7 @@ move_to_hide
 name_adopt
 
 - When Object is Selected: Adopts the name from the Parent
+
 ![adopt](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/63c6f0bc-b1c1-4128-850d-1df47324e1dd)
 
 ---
@@ -64,6 +65,7 @@ name_adopt
 name_inherit
 
 - When Object is Selected: Inherits the name from the Children
+
 ![inherit](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/a4167067-6a2a-402b-bc17-8d8d9bba0a95)
 
 ---
