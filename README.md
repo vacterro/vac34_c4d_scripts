@@ -1,5 +1,9 @@
 # vac34_c4d_scripts_0.1
-My custom Cinema 4D Scripts.
+My custom Cinema 4D Scripts. 
+
+Installing:
+
+Just copy the folder with scripts to C:\Users\[USERNANE]\AppData\Roaming\Maxon\Maxon Cinema 4D 2024_XXXXXXXX\library\scripts
 
 ---
 ![area_cam](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/04f924b5-4e75-4920-bc5f-c838b4609e53)
