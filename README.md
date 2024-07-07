@@ -10,12 +10,21 @@ To quickly get to the AppData folder, just hit WIN + R, type there %appdata%, En
 ---
 ![area_cam](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/04f924b5-4e75-4920-bc5f-c838b4609e53)
 area_light_at_cam
+
 - Creates RS Area Light at current viewport view.
+
+---
+
+![icon2](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/813c00ee-0652-4094-bff5-51ffae7339e8)
+color_chooser
+
+- When Object(s) is Selected: Suggests Color Picker to apply the Icon Color for the Object in Object Manager.
 
 ---
 
 ![create_target_null](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/5bb6e60c-3d79-42b8-a7a2-a334aeb6770c)
 create_target_null
+
 - When Object is Selected: adds to the object Target Tag and creates the targeted null at the object position.
 - Shift-Click: Creates at World origin.
 
@@ -49,6 +58,16 @@ hide_unhide
 move_to_hide
 
 - When Object(s) is Selected: Sets its visibility to "Off" and Moves as children to the "hide" null. Creates the "hide" null if it does not exists.
+
+---
+
+![icon3](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/206e7b2d-4218-4170-98be-2ba193221b92)
+multiple_instance
+
+- When Objects are Selected: Converts the Selected Objects to Instances with pre-selected "Render Instance" referring to first object selected in the row.
+
+  (_So, when You select 10 objects from up-side to down, then the first object would be a Reference (Source), then the next 9 objects would be as Instances._)
+
 
 ---
 
