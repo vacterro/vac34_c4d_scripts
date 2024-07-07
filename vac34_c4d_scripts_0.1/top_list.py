@@ -4,7 +4,7 @@ from c4d import gui
 def main():
     doc = c4d.documents.GetActiveDocument()
     selected_objects = doc.GetActiveObjects(c4d.GETACTIVEOBJECTFLAGS_CHILDREN)
-    
+
     if not selected_objects:
         gui.MessageDialog("No objects selected.")
         return
@@ -17,6 +17,9 @@ def main():
     doc.StartUndo()
 
     for obj in selected_objects:
+        # Save the coordinates of the original object
+        obj_matrix = obj.GetMg()
+
         if shift_pressed:
             # The Shift key is pressed, move to the first position within the parent if it exists
             parent = obj.GetUp()
@@ -36,6 +39,9 @@ def main():
             obj.Remove()
             doc.InsertObject(obj, pred=None, checknames=True)
             doc.AddUndo(c4d.UNDOTYPE_CHANGE, obj)
+
+        # Restore the coordinates of the object
+        obj.SetMg(obj_matrix)
 
     # End undo recording
     doc.EndUndo()
