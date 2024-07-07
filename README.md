@@ -64,7 +64,7 @@ move_to_hide
 ![icon3](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/206e7b2d-4218-4170-98be-2ba193221b92)
 multiple_instance
 
-- When Objects are Selected: Converts the Selected Objects to Instances with pre-selected "Render Instance" referring to first object selected in the row.
+- When Objects are Selected: Converts the Selected Objects to Instances with pre-selected "Render Instance" parameter. The Source is the first object Selected in the row.
 
   (_So, when You select 10 objects from up-side to down, then the first object would be a Reference (Source), then the next 9 objects would be as Instances._)
 
