@@ -1,64 +1,94 @@
 import c4d
+from c4d import gui
+
+def create_instance_objects(doc, reference_obj, target_objects):
+    """
+    Creates instance objects for each target object, referencing the reference object.
+    
+    Args:
+        doc (c4d.documents.BaseDocument): The active document
+        reference_obj (c4d.BaseObject): The object to instance
+        target_objects (list): Objects to replace with instances
+        
+    Returns:
+        list: Created instance objects
+    """
+    instances = []
+    
+    for obj in target_objects:
+        if not obj:
+            continue
+            
+        # Store original transform and hierarchy info
+        obj_matrix = obj.GetMg()
+        parent = obj.GetUp()
+        pred = obj.GetPred()
+        
+        try:
+            # Create and configure instance
+            instance = c4d.BaseObject(c4d.Oinstance)
+            if not instance:
+                raise RuntimeError("Failed to create instance object")
+                
+            instance[c4d.INSTANCEOBJECT_LINK] = reference_obj
+            instance[c4d.INSTANCEOBJECT_RENDERINSTANCE_MODE] = 1  # Render Instance
+            instance.SetName(f"{obj.GetName()}_instance")
+            
+            # Insert in scene
+            doc.InsertObject(instance, parent=parent, pred=pred, checknames=True)
+            instance.SetMg(obj_matrix)
+            
+            # Register undo operations
+            doc.AddUndo(c4d.UNDOTYPE_NEW, instance)
+            doc.AddUndo(c4d.UNDOTYPE_DELETE, obj)
+            
+            # Remove original object
+            obj.Remove()
+            
+            instances.append(instance)
+            
+        except Exception as e:
+            print(f"Error processing {obj.GetName()}: {str(e)}")
+            
+    return instances
 
 def main():
-    # Get the active document
     doc = c4d.documents.GetActiveDocument()
     if not doc:
+        gui.MessageDialog("No active document found")
         return
 
-    # Get selected objects
     selected_objects = doc.GetActiveObjects(c4d.GETACTIVEOBJECTFLAGS_CHILDREN)
     if not selected_objects:
+        gui.MessageDialog("No objects selected")
         return
 
-    # Ensure we have at least one reference object and one target object
     if len(selected_objects) < 2:
-        print("Select at least one reference object and one target object.")
+        gui.MessageDialog("Select at least 1 reference object and 1 target object")
         return
 
-    # The first selected object is the reference object
-    reference_object = selected_objects[0]
-
-    # Start undo recording
     doc.StartUndo()
+    try:
+        reference_obj = selected_objects[0]
+        target_objects = selected_objects[1:]
+        
+        instances = create_instance_objects(doc, reference_obj, target_objects)
+        
+        if instances:
+            # Select all created instances
+            doc.SetActiveObject(None, c4d.SELECTION_NEW)  # Clear selection first
+            for instance in instances:
+                doc.SetActiveObject(instance, c4d.SELECTION_ADD)
+            
+            gui.MessageDialog(f"Created {len(instances)} instance objects")
+        else:
+            gui.MessageDialog("No instances were created")
+            
+    except Exception as e:
+        gui.MessageDialog(f"Error: {str(e)}")
+    finally:
+        doc.EndUndo()
+        c4d.EventAdd()
 
-    # Create an Instance object for each subsequent selected object
-    instances = []
-    for obj in selected_objects[1:]:
-        # Save the coordinates of the original object
-        obj_matrix = obj.GetMg()
-
-        # Create instance
-        instance = c4d.BaseObject(c4d.Oinstance)
-        instance[c4d.INSTANCEOBJECT_LINK] = reference_object
-        instance[c4d.INSTANCEOBJECT_RENDERINSTANCE_MODE] = 1  # Render Instance mode
-        instance.SetName(obj.GetName())  # Set instance name to original object name
-
-        # Insert the instance at the same hierarchy level and position as the original object
-        doc.InsertObject(instance, parent=obj.GetUp(), pred=obj.GetPred(), checknames=True)
-
-        # Set the instance's coordinates to the original object's coordinates
-        instance.SetMg(obj_matrix)
-
-        # Add undo steps
-        doc.AddUndo(c4d.UNDOTYPE_NEW, instance)
-        doc.AddUndo(c4d.UNDOTYPE_DELETE, obj)
-
-        # Remove original object from the scene
-        obj.Remove()
-
-        instances.append(instance)
-
-    # Select all created instances
-    for instance in instances:
-        doc.SetActiveObject(instance, c4d.SELECTION_ADD)
-
-    # End undo recording
-    doc.EndUndo()
-
-    # Update the scene
-    c4d.EventAdd()
-
-# Execute main()
 if __name__ == '__main__':
     main()
