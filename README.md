@@ -6,6 +6,16 @@ Installing:
 Just copy the folder with scripts to C:\Users\ [USERNAME] \AppData\Roaming\Maxon\Maxon Cinema 4D 2024_XXXXXXXX\library\scripts
 
 To quickly get to the AppData folder, just hit WIN + R, type there %appdata%, Enter.
+---
+**CHANGELOGS:**
+
+Version 0.15:
+
+create_target_null:
+
+- Shift pressed for multiple objects now creates 1 shared null.
+
+**All scripts fixed for Undo state properly.**
 
 ---
 ![area_cam](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/04f924b5-4e75-4920-bc5f-c838b4609e53)
