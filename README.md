@@ -15,6 +15,8 @@ create_target_null:
 
 - Shift pressed for multiple objects now creates 1 shared null.
 
+- Added sort_by_type_name.
+
 **All scripts fixed for Undo state properly.**
 
 ---
