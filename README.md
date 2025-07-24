@@ -104,6 +104,15 @@ selection_object
 ![2024-06-12_013637](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/708f26f7-de84-4c37-a1dd-d20161582a8d)
 
 ---
+![sort_by_type_name](<img width="64" height="64" alt="sort_by_type_name" src="https://github.com/user-attachments/assets/5a314bc8-7483-489c-9c2d-f4303b148196" />
+)
+sort_by_type_name
+
+- Sorting the Children by Generator, Deformer, etc... type and then by Alphabet.
+- Shift + Click: Sorting only by Alphabet.
+
+
+---
 
 ![top_list](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/46cd14fe-de60-4e38-8dad-3bb5a435ad2e)
 top_list
