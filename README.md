@@ -1,3 +1,5 @@
+# * **THIS CONTENT IS AI GENERATED** *
+
 # vac34_c4d_scripts_0.15
 My custom Cinema 4D Scripts. 
 
