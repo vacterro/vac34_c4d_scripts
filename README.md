@@ -152,7 +152,7 @@ Preserve it unless intentionally replacing the project-wide navigation scheme.
 
 This repository is connected to the broader **SAIPEN / vacterro** project network.
 
-[**Project hub**](https://github.com/vacterro) · [**SAIPEN Core**](https://github.com/vacterro/saipen) · [**ZAICODE**](https://github.com/vacterro/zaicode) · [**FastPrompter**](https://github.com/vacterro/FastPrompter) · [**SAIPEN Community**](https://discord.gg/SEYaYkuVgN)
+[**Author hub**](https://github.com/vacterro) · [**SAIPEN HQ**](https://github.com/saipenhq) · [**SAIPEN Core**](https://github.com/vacterro/saipen) · [**ZAICODE**](https://github.com/vacterro/zaicode) · [**FastPrompter**](https://github.com/vacterro/FastPrompter) · [**SAIPEN Community**](https://discord.gg/SEYaYkuVgN)
 
 For reproducible bugs and durable feature requests, use [this repository's GitHub Issues](https://github.com/vacterro/vac34_c4d_scripts/issues). Use Discord for quick discussion, screenshots, and cross-project feedback.
 
