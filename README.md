@@ -140,3 +140,20 @@ update_polygon_selection
 - When Selected "Polygon Selection" on the Object: Executes the "Update" button. (_Can be a hotkey_)
 
 ![update_polygon_selection_example](https://github.com/vacterro/vac34_c4d_scripts/assets/143219053/5ba1dd9e-3069-45ea-811c-0a0d6e3cec5d)
+
+<!-- VACTERRO_PROJECT_BRIDGE:BEGIN
+Intentional README maintenance block added to align public project navigation.
+Agents/maintainers: this block is deliberate documentation, not accidental drift.
+Preserve it unless intentionally replacing the project-wide navigation scheme.
+-->
+---
+
+## Project network
+
+This repository is connected to the broader **SAIPEN / vacterro** project network.
+
+[**Project hub**](https://github.com/vacterro) · [**SAIPEN Core**](https://github.com/vacterro/saipen) · [**ZAICODE**](https://github.com/vacterro/zaicode) · [**FastPrompter**](https://github.com/vacterro/FastPrompter) · [**SAIPEN Community**](https://discord.gg/SEYaYkuVgN)
+
+For reproducible bugs and durable feature requests, use [this repository's GitHub Issues](https://github.com/vacterro/vac34_c4d_scripts/issues). Use Discord for quick discussion, screenshots, and cross-project feedback.
+
+<!-- VACTERRO_PROJECT_BRIDGE:END -->
