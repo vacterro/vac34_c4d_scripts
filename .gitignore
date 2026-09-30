@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Runtime / editor noise
+*.log
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
