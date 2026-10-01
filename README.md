@@ -1,7 +1,10 @@
 # * **THIS CONTENT IS AI GENERATED** *
 
-# vac34_c4d_scripts_0.15
-My custom Cinema 4D Scripts. 
+# vac34_c4d_scripts — Cinema 4D Automation Scripts
+
+**Python scripts and workflow automation for Maxon Cinema 4D, covering object, lighting, hierarchy, visibility, naming, and scene-management tasks.**
+
+Current collection version: **0.15**.
 
 Installing:
 
