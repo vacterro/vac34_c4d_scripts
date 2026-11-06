@@ -7,6 +7,7 @@ If this project saves you time, makes your workflow easier, or you simply want t
 - Buy Me a Coffee: https://buymeacoffee.com/vacuum34
 - Boosty: https://boosty.to/vacuum34/donate
 - PayPal: https://paypal.me/AlexNelin
+- Revolut: https://revolut.me/alexnf7xb
 
 ## Bank transfer (EUR)
 
